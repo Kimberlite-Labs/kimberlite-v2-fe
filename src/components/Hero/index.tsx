@@ -1,10 +1,6 @@
 "use client";
-import Image from "next/image";
-import React, { useRef } from "react";
 
-type Props = {};
-
-const index = (props: Props) => {
+const index = () => {
   return (
     <div className="relative w-[100%] h-[fit] text-white ">
       <div className="flex flex-col items-center justify-center gap-5 mt-[50%] lg:mt-[100px] ">
