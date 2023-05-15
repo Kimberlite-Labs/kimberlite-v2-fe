@@ -3,19 +3,33 @@ import Navbar from "../components/Navbar/ConnectNavbar";
 import { useAccount } from "wagmi";
 import { useEffect, useState } from "react";
 import { ethers } from "ethers";
-// import gemHunterWaitlistABI from "../ABI/gemHunterWaitlistABI.json";
 
 declare global {
   interface Window {
     ethereum: any;
   }
 }
+// const contractABI = [
+//   {
+//     inputs: [
+//       {
+//         internalType: "address",
+//         name: "_upline",
+//         type: "address",
+//       },
+//     ],
+//     name: "preRegister",
+//     outputs: [],
+//     stateMutability: "nonpayable",
+//     type: "function",
+//   },
+// ];
+
+// const contractAddress = "0x163efB16aAD59Ae214956DbF2B9F7Ef880005559";
+
 const ConnetWallet = () => {
   const { address, isConnected } = useAccount();
   const [balance, setBalance] = useState<string | null>(null);
-  // const { setDefaultChain } = useWeb3Modal();
-
-  // const contractAddress = "0x163efB16aAD59Ae214956DbF2B9F7Ef880005559";
 
   useEffect(() => {
     const fetchBalance = async () => {
@@ -67,14 +81,18 @@ const ConnetWallet = () => {
               </div>
             </div>
           ) : (
-            <div className="flex justify-center items-center mt-[100px] flex-col">
-              <img
-                className="w-[100%]"
-                src="/frame/cwFrame1.svg"
-                alt="connectWallet"
-                width={1000}
-                height={1000}
-              />
+            <div className="flex justify-center items-center mt-[100px] flex-col gap-8">
+              <p className=" text-2xl text-[#F04B08] md:text-5xl text-center">
+                Hello Gem Hunter You are at Kimberlite
+              </p>
+              <p className=" text-2xl text-[#F04B08] md:text-5xl text-center">
+                {" "}
+                You are at Kimberlite
+              </p>
+              <p className=" text-lg text-[#fff] md:text-3xl text-center">
+                {" "}
+                Your Gateway to AI-Driven Multichain High Yield Aggregation
+              </p>
             </div>
           )}
         </div>
