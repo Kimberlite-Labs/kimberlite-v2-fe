@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className="w-full">
-      <div className="px-4 pt-10 mx-auto sm:px-6 ">
+      <div className="px-4 pt-6 mx-auto sm:px-6 ">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <a href="#" className="mr-16 text-lg font-semibold text-gray-800">
@@ -14,9 +15,17 @@ const Index = () => {
           </div>
           <div className="z-50 items-center hidden md:flex ">
             <div className="flex items-baseline ml-auto space-x-4 font-mono text-xl font-bold text-white">
+              <Link to="/">
+                <button className=" hover:text-gray-800">Home</button>
+              </Link>
               <button className=" hover:text-gray-800">Whitepaper</button>
               <button className=" hover:text-gray-800">Explore Safe</button>
               <button className=" hover:text-gray-800">Pre-registration</button>
+              <Link to="/connectWallet">
+                <button className="p-4 bg-gray-700 rounded-xl ">
+                  connect Wallet
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -37,15 +46,27 @@ const Index = () => {
       {isOpen && (
         <div className=" md:hidden">
           <div className="flex flex-col justify-center px-2 pt-2 pb-3 space-y-1 text-center text-white cursor-pointer">
-            <button className="z-50 block px-3 py-2 text-base font-medium rounded-md hover:text-gray-800">
-              Whitepaper
-            </button>
+            <Link to="/">
+              <button className="z-50 block px-3 py-2 text-base font-medium rounded-md hover:text-gray-800">
+                Home
+              </button>
+            </Link>
+            <Link to="/">
+              <button className="z-50 block px-3 py-2 text-base font-medium rounded-md hover:text-gray-800">
+                Whitepaper
+              </button>
+            </Link>
             <button className="z-50 px-3 py-2 text-base font-medium rounded-md only:block hover:text-gray-800">
               Explore Safe
             </button>
             <button className="z-50 block px-3 py-2 text-base font-medium rounded-md hover:text-gray-800">
               Pre-registration
             </button>
+            <Link to="/connectWallet">
+              <button className="p-4 bg-gray-700 rounded-xl ">
+                connect Wallet
+              </button>
+            </Link>
           </div>
         </div>
       )}
