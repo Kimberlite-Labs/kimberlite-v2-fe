@@ -47,8 +47,8 @@ const Index = () => {
       {isOpen && (
         <div className=" md:hidden">
           <div className="flex flex-col justify-center px-2 pt-2 pb-3 mx-auto space-y-1 text-center text-white cursor-pointer">
-            <Link to="/" className="mx-auto ">
-              <button className="z-50 block px-3 py-2 text-base font-medium rounded-md hover:text-gray-800">
+            <Link to="/" className="z-50 mx-auto ">
+              <button className="block px-3 py-2 text-base font-medium rounded-md hover:text-gray-800">
                 Home
               </button>
             </Link>
@@ -62,8 +62,8 @@ const Index = () => {
                 Explore Safe
               </button>
             </Link>
-            <Link to="/connectWallet" className="mx-auto">
-              <button className="z-50 block px-3 py-2 text-base font-medium rounded-md hover:text-gray-800">
+            <Link to="/connectWallet" className="z-50 mx-auto">
+              <button className="block px-3 py-2 text-base font-medium rounded-md  hover:text-gray-800">
                 Pre-registration
               </button>
             </Link>
