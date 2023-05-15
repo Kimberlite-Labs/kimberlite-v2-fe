@@ -1,4 +1,4 @@
-import { Web3Button, Web3NetworkSwitch } from "@web3modal/react";
+import { Web3Button } from "@web3modal/react";
 import Navbar from "../components/Navbar/ConnectNavbar";
 import { useAccount } from "wagmi";
 import { useEffect, useState } from "react";
