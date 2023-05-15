@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <>
       <main
-        className={` bg-black min-h-screen  overflow-hidden flex-col items-center justify-between`}
+        className={` bg-black   overflow-hidden flex-col items-center justify-between`}
       >
         <div className="relative w-screen h-[100vh] bg-repeat-y bg-bg-elip">
           <video
