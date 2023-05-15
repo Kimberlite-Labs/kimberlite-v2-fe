@@ -38,11 +38,11 @@ const ConnetWallet = () => {
             <Web3Button />
           </div>
           {isConnected ? (
-            <>
-              <p className="mt-10 text-5xl text-[#F04B08] ">
+            <div className="">
+              <p className="mt-10 md:text-5xl text-2xl shrink-0 text-[#F04B08] text-center ">
                 Welcome, Hunter!!!
               </p>
-              <p className="mx-auto mt-10 text-xl max-w-[700px] text-white ">
+              <p className="mx-auto mt-10 text-xl max-w-[700px] text-white px-3 text-center">
                 Are you ready to earn rewards and climb the ranks? By growing
                 your team and sharing your referral link, you can earn up to 15%
                 of your team's KLB income across five levels. Don't miss out on
@@ -59,14 +59,13 @@ const ConnetWallet = () => {
                 <p>Direct Referrals : 0</p>
                 <p>Team Size : 0</p>
               </div>
-              <div className="flex flex-col gap-3 text-white ">
+              <div className="flex flex-col gap-3 m-2 text-white ">
                 <p>Your Referral link : </p>
-                <p className="p-3 border rounded-2xl">
+                <p className="p-3 border rounded-2xl ">
                   https://kimberlite.rocks/pre/OxE49B01....caD26E
                 </p>
               </div>
-              <p className="mt-10 text-2xl text-white ">{`Disconnect ${address}`}</p>
-            </>
+            </div>
           ) : (
             <div className="flex justify-center items-center mt-[100px] flex-col">
               <img
