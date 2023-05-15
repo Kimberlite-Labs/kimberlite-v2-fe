@@ -1,9 +1,9 @@
-import { Web3Button, Web3NetworkSwitch, useWeb3Modal } from "@web3modal/react";
-import Navbar from "../components/Navbar/index";
+import { Web3Button, Web3NetworkSwitch } from "@web3modal/react";
+import Navbar from "../components/Navbar/ConnectNavbar";
 import { useAccount } from "wagmi";
 import { useEffect, useState } from "react";
 import { ethers } from "ethers";
-import gemHunterWaitlistABI from "../ABI/gemHunterWaitlistABI.json";
+// import gemHunterWaitlistABI from "../ABI/gemHunterWaitlistABI.json";
 
 declare global {
   interface Window {
@@ -13,9 +13,9 @@ declare global {
 const ConnetWallet = () => {
   const { address, isConnected } = useAccount();
   const [balance, setBalance] = useState<string | null>(null);
-  const { setDefaultChain } = useWeb3Modal();
+  // const { setDefaultChain } = useWeb3Modal();
 
-  const contractAddress = "0x163efB16aAD59Ae214956DbF2B9F7Ef880005559";
+  // const contractAddress = "0x163efB16aAD59Ae214956DbF2B9F7Ef880005559";
 
   useEffect(() => {
     const fetchBalance = async () => {
@@ -36,7 +36,6 @@ const ConnetWallet = () => {
         <div className="flex flex-col items-center justify-center ">
           <div className="flex items-center justify-end gap-5 ">
             <Web3Button />
-            <Web3NetworkSwitch />
           </div>
           {isConnected ? (
             <>

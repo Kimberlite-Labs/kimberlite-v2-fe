@@ -1,5 +1,5 @@
 import Home from "./pages/Home";
-import ConnectWallet from "./pages/connectWallet";
+import ConnectWallet from "./pages/ConnectWallet";
 import { Route, Routes } from "react-router-dom";
 
 function App() {

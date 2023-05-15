@@ -1,3 +1,4 @@
+import { Web3Button } from "@web3modal/react";
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { Link } from "react-router-dom";
@@ -25,6 +26,7 @@ const Index = () => {
                   Pre-registration
                 </button>
               </Link>
+              <Web3Button />
             </div>
           </div>
 
@@ -63,6 +65,7 @@ const Index = () => {
                 Pre-registration
               </button>
             </Link>
+            <Web3Button />
           </div>
         </div>
       )}
