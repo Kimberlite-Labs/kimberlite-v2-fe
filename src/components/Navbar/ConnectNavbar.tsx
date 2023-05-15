@@ -26,7 +26,7 @@ const Index = () => {
                   Pre-registration
                 </button>
               </Link>
-              <Web3Button />
+              <Web3Button />{" "}
             </div>
           </div>
 
@@ -46,26 +46,27 @@ const Index = () => {
       </div>
       {isOpen && (
         <div className=" md:hidden">
-          <div className="flex flex-col justify-center px-2 pt-2 pb-3 space-y-1 text-center text-white cursor-pointer">
-            <Link to="/">
+          <div className="flex flex-col justify-center px-2 pt-2 pb-3 mx-auto space-y-1 text-center text-white cursor-pointer">
+            <Link to="/" className="mx-auto ">
               <button className="z-50 block px-3 py-2 text-base font-medium rounded-md hover:text-gray-800">
                 Home
               </button>
             </Link>
-            <Link to="/">
+            <Link to={""} className="mx-auto">
               <button className="z-50 block px-3 py-2 text-base font-medium rounded-md hover:text-gray-800">
                 Whitepaper
               </button>
             </Link>
-            <button className="z-50 px-3 py-2 text-base font-medium rounded-md only:block hover:text-gray-800">
-              Explore Safe
-            </button>
-            <Link to="/connectWallet">
+            <Link to={""} className="mx-auto">
+              <button className="z-50 px-3 py-2 text-base font-medium rounded-md only:block hover:text-gray-800">
+                Explore Safe
+              </button>
+            </Link>
+            <Link to="/connectWallet" className="mx-auto">
               <button className="z-50 block px-3 py-2 text-base font-medium rounded-md hover:text-gray-800">
                 Pre-registration
               </button>
             </Link>
-            <Web3Button />
           </div>
         </div>
       )}

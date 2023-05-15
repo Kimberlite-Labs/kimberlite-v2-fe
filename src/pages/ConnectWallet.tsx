@@ -34,7 +34,7 @@ const ConnetWallet = () => {
       <div className=" w-screen absolute top-0 left-0 object-cover min-w-full h-[100vh] bg-repeat-y bg-bg-elip">
         <Navbar />
         <div className="flex flex-col items-center justify-center ">
-          <div className="flex items-center justify-end gap-5 ">
+          <div className="flex items-center justify-end gap-5 mt-10 ">
             <Web3Button />
           </div>
           {isConnected ? (
