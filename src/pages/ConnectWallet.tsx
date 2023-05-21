@@ -13,14 +13,14 @@ import {
 import { Web3Button } from "@web3modal/react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { isAddress, toNumber } from "ethers";
+import { isAddress } from "ethers";
 
-type RegisteredDisplayProps = {
-  Points?: number;
-  TeamSize?: number;
-  refLink?: string;
-  DRef?: number;
-};
+// type RegisteredDisplayProps = {
+//   Points?: number;
+//   TeamSize?: number;
+//   refLink?: string;
+//   DRef?: number;
+// };
 
 const isValidWalletAddres = (address: string) => {
   try {
