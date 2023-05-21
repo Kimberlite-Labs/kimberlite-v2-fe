@@ -8,7 +8,9 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/connectWallet" element={<ConnectWallet />} />
+          <Route path="/pre" element={<ConnectWallet />} />
+          <Route path="/pre/:upline" element={<ConnectWallet />} />
+          <Route path="/pre/*" element={<ConnectWallet />} />
         </Routes>
       </main>
     </>

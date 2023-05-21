@@ -21,7 +21,7 @@ const Index = () => {
               </Link>
               <button className=" hover:text-gray-800">Whitepaper</button>
               <button className=" hover:text-gray-800">Explore Safe</button>
-              <Link to="/connectWallet">
+              <Link to="/pre">
                 <button className=" hover:text-gray-800">
                   Pre-registration
                 </button>
@@ -62,8 +62,8 @@ const Index = () => {
                 Explore Safe
               </button>
             </Link>
-            <Link to="/connectWallet" className="z-50 mx-auto">
-              <button className="block px-3 py-2 text-base font-medium rounded-md  hover:text-gray-800">
+            <Link to="/pre" className="z-50 mx-auto">
+              <button className="block px-3 py-2 text-base font-medium rounded-md hover:text-gray-800">
                 Pre-registration
               </button>
             </Link>

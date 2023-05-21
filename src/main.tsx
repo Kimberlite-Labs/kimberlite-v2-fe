@@ -10,6 +10,12 @@ import { Web3Modal } from "@web3modal/react";
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
 import { arbitrum } from "wagmi/chains";
 
+declare global {
+  interface Window {
+    ethereum: any;
+  }
+}
+
 const chains = [arbitrum];
 
 const projectId = "YOUR_PROJECT_ID";
@@ -17,6 +23,7 @@ const { publicClient } = configureChains(chains, [w3mProvider({ projectId })]);
 const wagmiConfig = createConfig({
   autoConnect: true,
   connectors: w3mConnectors({ projectId, version: 1, chains }),
+
   publicClient,
 });
 const ethereumClient = new EthereumClient(wagmiConfig, chains);
@@ -31,6 +38,10 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
         <App />
       </Router>
     </WagmiConfig>
-    <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
+    <Web3Modal
+      projectId={projectId}
+      ethereumClient={ethereumClient}
+      defaultChain={arbitrum}
+    />
   </React.StrictMode>
 );
