@@ -1,6 +1,5 @@
 import { ethers } from "ethers";
-import { CA } from "../../ABI/GemHunterWaitlistABI";
-import ABI from "../../ABI/GemHunterWaitlistABI.json";
+import { CA, ABI } from "../../ABI/GemHunterWaitlistABI";
 
 const provider = new ethers.BrowserProvider(window.ethereum);
 
