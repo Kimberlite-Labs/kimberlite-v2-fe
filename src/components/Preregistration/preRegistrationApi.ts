@@ -1,5 +1,6 @@
 import { ethers } from "ethers";
 import { CA, ABI } from "../../ABI/GemHunterWaitlistABI";
+import { toast } from "react-toastify";
 
 const provider = new ethers.BrowserProvider(window.ethereum);
 
@@ -53,7 +54,7 @@ export async function preRegister(
     return preReg;
   } catch (e) {
     if (e.message.includes("user rejected transaction")) {
-      console.error("Error: Please confirm transaction");
+      toast.error("Error: Please confirm transaction");
     } else {
       console.log(e);
     }

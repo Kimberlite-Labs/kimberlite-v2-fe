@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { useAccount, useWalletClient } from "wagmi";
 
 import { useParams } from "react-router-dom";
+import { IoCopy } from "react-icons/all";
+import { toast } from "react-toastify";
 
 import {
   isRegisteredUser,
@@ -14,6 +16,7 @@ import { Web3Button } from "@web3modal/react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { isAddress } from "ethers";
+import Loading from "../components/Loading/loading";
 
 // type RegisteredDisplayProps = {
 //   Points?: number;
@@ -34,6 +37,7 @@ const isValidWalletAddres = (address: string) => {
 };
 
 const ConnectWallet = () => {
+  const [loading, setLoading] = useState(false);
   const { isConnected, address } = useAccount();
   const { upline: uplineAddressFromParams } = useParams();
   const [uplineAddress, setUplineAddress] = useState("");
@@ -66,7 +70,7 @@ const ConnectWallet = () => {
           setHunter(true);
         }
       } catch (e) {
-        console.log(e);
+        return;
       }
     }
   }
@@ -88,12 +92,12 @@ const ConnectWallet = () => {
   useEffect(() => {
     async function checkUser() {
       if (address) {
+        setLoading(true);
         try {
           const userStatus = await isRegisteredUser(address);
           if (userStatus) {
             const Bonus = await getUserBonus(address);
             const Team = await getUserData(address);
-            console.log(Number(Bonus));
 
             setBonus(Number(Bonus));
             setUserData(Team);
@@ -102,14 +106,24 @@ const ConnectWallet = () => {
         } catch (e) {
           console.error(e);
         }
+        setLoading(false);
       }
     }
     checkUser();
   }, [address]);
 
+  const copyToClipboard = () => {
+    const link = `https://kimberlite.rocks/pre/${address}`;
+    navigator.clipboard.writeText(link);
+    toast.success("Copied");
+  };
+
+  if (loading) {
+    return <div className="flex justify-center h-screen pt-[200px] bg-black w-[100vw] items-centser h"><Loading/></div>; // Render a loading state
+  }
   return (
     <>
-      <main className="relative flex-col items-center h-auto gap-4 overflow-hidden bg-black ">
+      <main className="relative flex-col items-center h-auto gap-4 overflow-hidden bg-black">
         <Navbar />
         <div className="flex flex-col  items-center justify-center  w-[100%] ">
           <div className="z-50 flex items-center justify-end gap-5 mt-10 ">
@@ -157,11 +171,13 @@ const ConnectWallet = () => {
               </p>
               <div className="flex flex-col items-center justify-between gap-5 md:flex-row md:px-5">
                 <p className="mt-6 text-lg mx-auto text-center max-w-[500px] text-white px-3 font-serif ">
-                  Are you ready to earn rewards and climb the ranks? By growing
-                  your team and sharing your referral link, you can earn up to
-                  15% of your team's KLB income across five levels. Don't miss
-                  out on this exciting opportunity to earn rewards and make your
-                  mark in the Kimberlite ecosystem. Let's get started today!
+                  Are you ready to earn rewards and climb the ranks?
+                  <br />
+                  By growing your team and sharing your referral link, you can
+                  earn up to 15% of your team's KLB income across five levels.
+                  <br /> Don't miss out on this exciting opportunity to earn
+                  rewards and make your mark in the Kimberlite ecosystem. Let's
+                  get started today!
                 </p>
 
                 <div className="flex flex-col items-center justify-center gap-3 p-8 mx-auto text-white border-2 border-white rounded-md ring-gray-500 ring-2 bor ">
@@ -171,10 +187,15 @@ const ConnectWallet = () => {
                   <p>Team Size : {Number(userData.teamSize)}</p>
                 </div>
               </div>
-              <div className="flex justify-center items-center flex-col gap-3 p-1 mx-auto text-white  w-[100%] ">
+              <div className=" relative flex justify-center items-center flex-col gap-3 p-1 mx-auto text-white  w-[100%] ">
                 <p className="text-[#F04B08] font-serif text-2xl">
                   Your Referral link :{" "}
                 </p>
+                <IoCopy
+                  onClick={copyToClipboard}
+                  size={30}
+                  className="absolute right-[10px] z-[100px] lg:right-[330px] text-white hover:text-orange-300"
+                />
                 <p className="p-4 mt-3 overflow-auto text-sm border rounded-2xl md:w-fit w-[90%] mb-2">
                   {`https://kimberlite.rocks/pre/${address}`}
                 </p>
@@ -182,7 +203,7 @@ const ConnectWallet = () => {
             </div>
           ) : (
             <div className="flex flex-col items-center justify-center h-screen">
-              <div className="flex flex-col items-stretch w-full py-2">
+              <div className="flex flex-col w-full py-2">
                 <label
                   htmlFor="upline"
                   className="pr-2 text-xl border-orange-400"
@@ -190,7 +211,7 @@ const ConnectWallet = () => {
                   Refferal Address:{" "}
                 </label>
                 <input
-                  className="border w-[80%] md:w-[70%] mx-auto mt-10 rounded-md border-orange-400 focus:border-orange-500 p-4"
+                  className="border z-50 w-[80%] md:w-[70%] mx-auto  rounded-md border-orange-400 focus:border-orange-500 p-4"
                   id="upline"
                   placeholder="0x..."
                   value={uplineAddress}
@@ -235,8 +256,8 @@ const ConnectWallet = () => {
                 onClick={() => {
                   Register();
                 }}
-                className="flex items-center justify-center p-3 mt-5 font-bold bg-blue-500 rounded-lg btn_primary ring-2 ring-white text-slate-50"
-                disabled={!isValidWalletAddres(uplineAddress)}
+                className="z-50 flex p-3 mt-5 font-bold bg-blue-500 rounded-lg ustify-center zitems-center btn_primary ring-2 ring-white text-slate-50"
+                disabled={!isAddress(address)}
               >
                 Register
               </button>
@@ -261,7 +282,7 @@ const ConnectWallet = () => {
                 Kimberlite{" "}
               </p>{" "}
               <p className=" text-2xl max-w-3xl text-[#fff] md:text-3xl text-center md:max-w-[400px]">
-                Your Gateway to AI-Driven Multichain High Yield Aggregation{" "}
+                Pre-register for early access to our strategy vaults.{" "}
               </p>{" "}
             </div>
           </div>
