@@ -119,7 +119,11 @@ const ConnectWallet = () => {
   };
 
   if (loading) {
-    return <div className="flex justify-center h-screen pt-[200px] bg-black w-[100vw] items-centser h"><Loading/></div>; // Render a loading state
+    return (
+      <div className="flex justify-center h-screen pt-[200px] bg-black w-[100vw] items-centser h">
+        <Loading />
+      </div>
+    ); // Render a loading state
   }
   return (
     <>
@@ -202,8 +206,11 @@ const ConnectWallet = () => {
               </div>
             </div>
           ) : (
-            <div className="flex flex-col items-center justify-center h-screen">
-              <div className="flex flex-col w-full py-2">
+            <div className="flex flex-col items-center justify-center ">
+              <div className="flex flex-col w-full h-screen gap-10">
+                <p className="mt-10 text-2xl max-w-3xl mx-auto text-[#fff] md:text-3xl text-center md:max-w-[400px]">
+                  Pre-register for early access to our strategy vaults.{" "}
+                </p>{" "}
                 <label
                   htmlFor="upline"
                   className="pr-2 text-xl border-orange-400"
@@ -219,7 +226,7 @@ const ConnectWallet = () => {
                     setUplineAddress(e.target.value);
                   }}
                 />
-                {!uplineReg && uplineAddress && (
+                {/* {!uplineReg && uplineAddress && (
                   <p
                     className="text-[20px] text-center text-cyan-50 mt-5
                     pb-2"
@@ -235,32 +242,31 @@ const ConnectWallet = () => {
                       discord server
                     </a>
                   </p>
-                )}
+                )} */}
                 {!isValidWalletAddres(uplineAddress) && (
                   <p className="text-[20px] text-center text-cyan-50 py-5">
-                    Note: You need a refferal address. If you were not reffered,
-                    ask from our{" "}
-                    <a
+                    Note: You need a vaild address. to register,
+                    {/* ask from our{" "} */}
+                    {/* <a
                       href="https://discord.gg/wsZwhFqhRc"
                       target="_blank"
                       rel="noreferrer"
                       className="text-orange-500 cursor-pointer"
                     >
                       discord server
-                    </a>
+                    </a> */}
                   </p>
                 )}
+                <button
+                  onClick={() => {
+                    Register();
+                  }}
+                  className="z-50 flex p-5 mx-auto font-bold bg-blue-500 rounded-lg t-5 wp-3 ustify-center zitems-center btn_primary ring-2 ring-white text-slate-50 w-fit"
+                  disabled={!isAddress(address)}
+                >
+                  Register
+                </button>
               </div>
-
-              <button
-                onClick={() => {
-                  Register();
-                }}
-                className="z-50 flex p-3 mt-5 font-bold bg-blue-500 rounded-lg ustify-center zitems-center btn_primary ring-2 ring-white text-slate-50"
-                disabled={!isAddress(address)}
-              >
-                Register
-              </button>
             </div>
           )
         ) : (
