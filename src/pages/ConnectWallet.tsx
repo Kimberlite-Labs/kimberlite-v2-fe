@@ -48,7 +48,8 @@ const ConnectWallet = () => {
     { teamSize: number; directRefs: number } | undefined
   >();
 
-  const [uplineReg, setRegUpline] = useState();
+
+  // const [uplineReg, setRegUpline] = useState();
 
   useEffect(() => {
     if (uplineAddressFromParams) {
@@ -75,19 +76,19 @@ const ConnectWallet = () => {
     }
   }
 
-  useEffect(() => {
-    async function checkUpline() {
-      const isInputUplineRegistered = await isRegisteredUser(uplineAddress);
+  // useEffect(() => {
+  //   async function checkUpline() {
+      // const isInputUplineRegistered = await isRegisteredUser(uplineAddress);
 
       /* if (!isInputUplineRegistered) {
         setUplineAddress("0xc9Fa763a37AaB4c8Fa647a88fCbb02db46704a8E"); // This is the fallback address
       }
  */
-      setRegUpline(isInputUplineRegistered);
-    }
+      // setRegUpline(isInputUplineRegistered);
+  //   }
 
-    checkUpline();
-  }, [uplineAddress]);
+  //   checkUpline();
+  // }, [uplineAddress]);
 
   useEffect(() => {
     async function checkUser() {
@@ -243,20 +244,11 @@ const ConnectWallet = () => {
                     </a>
                   </p>
                 )} */}
-                {!isValidWalletAddres(uplineAddress) && (
+                {!isValidWalletAddres(uplineAddress) ? (
                   <p className="text-[20px] text-center text-cyan-50 py-5">
-                    Note: You need a vaild address. to register,
-                    {/* ask from our{" "} */}
-                    {/* <a
-                      href="https://discord.gg/wsZwhFqhRc"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-orange-500 cursor-pointer"
-                    >
-                      discord server
-                    </a> */}
+                    Note: You need a vaild address. to register. 
                   </p>
-                )}
+                ) : null}
                 <button
                   onClick={() => {
                     Register();
