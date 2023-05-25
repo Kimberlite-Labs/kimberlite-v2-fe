@@ -109,12 +109,45 @@ const ConnectWallet = () => {
 
   return (
     <>
-      <main className="flex-col items-center h-auto gap-4 overflow-hidden bg-black ">
+      <main className="relative flex-col items-center h-auto gap-4 overflow-hidden bg-black ">
         <Navbar />
         <div className="flex flex-col  items-center justify-center  w-[100%] ">
-          <div className="flex items-center justify-end gap-5 mt-10 ">
+          <div className="z-50 flex items-center justify-end gap-5 mt-10 ">
             <Web3Button />
           </div>
+        </div>
+
+        <div>
+          <img
+            src="/elip/elip1.svg"
+            alt=""
+            className="  absolute md:w-[35%] w-[100%] top-0 right-0 blur-2xl  animate-bounce"
+          />
+          <img
+            src="/elip/elip1.svg"
+            alt=""
+            className="absolute   md:w-[35%] w-[100%]  top-[500px] blur-2xl   animate-bounce"
+          />
+          <img
+            src="/elip/elip1.svg"
+            alt=""
+            className="absolute   md:w-[35%] w-[100%]  top-[0] blur-2xl   animate-bounce"
+          />
+          <img
+            src="/elip/elip1.svg"
+            alt=""
+            className="absolute   md:w-[35%] w-[100%]  top-[300] right-[400px] blur-2xl  animate-bounce"
+          />
+          <img
+            src="/elip/elip1.svg"
+            alt=""
+            className="absolute   md:w-[35%] w-[100%] right-0 blur-2xl   top-[500px]  animate-bounce"
+          />
+          {/* <img
+            src="/elip/elip1.svg"
+            alt=""
+            className="  absolute rotate-90 md:w-[50%] w-[100%] top-0 left-0 animate-bounce"
+          /> */}
         </div>
         {isConnected ? (
           Hunter ? (
@@ -210,14 +243,20 @@ const ConnectWallet = () => {
             </div>
           )
         ) : (
-          <div className="h-screen min-h-screen font-bold ">
+          <div className="h-screen min-h-screen font-bold overscroll-none">
             <div className="flex justify-center items-center mt-[50px] flex-col gap-10">
               {" "}
-              <p className=" text-5xl text-[#F04B08] md:text-8xl text-center">
+              <p className=" hidden lg:inline-block text-5xl text-[#F04B08] md:text-8xl text-center">
+                Hello Gem Hunter{" "}
+              </p>{" "}
+              <p className="lg:hidden text-5xl text-[#F04B08] md:text-8xl text-center">
                 Hello Gem <br />
                 Hunter{" "}
               </p>{" "}
-              <p className=" text-4xl text-[#F04B08] md:text-6xl text-center">
+              <p className=" hidden lg:inline-block text-4xl text-[#F04B08] md:text-6xl text-center">
+                You are at Kimberlite{" "}
+              </p>{" "}
+              <p className=" lg:hidden text-4xl text-[#F04B08] md:text-6xl text-center">
                 You are at <br />
                 Kimberlite{" "}
               </p>{" "}

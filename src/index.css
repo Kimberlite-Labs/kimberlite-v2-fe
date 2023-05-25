@@ -8,3 +8,24 @@
   background-repeat: no-repeat;
   background-position: center center;
 }
+
+@keyframes example {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.elip1 {
+  position: absolute;
+  background-image: url("/elip/elip1.svg");
+
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
