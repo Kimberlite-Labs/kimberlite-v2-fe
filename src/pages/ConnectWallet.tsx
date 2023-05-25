@@ -109,7 +109,7 @@ const ConnectWallet = () => {
 
   return (
     <>
-      <main className="flex-col items-center justify-between overflow-hidden bg-black bg-bg-elip  w-[100%] ">
+      <main className="flex-col items-center h-auto gap-4 overflow-hidden bg-black ">
         <Navbar />
         <div className="flex flex-col  items-center justify-center  w-[100%] ">
           <div className="flex items-center justify-end gap-5 mt-10 ">
@@ -118,12 +118,12 @@ const ConnectWallet = () => {
         </div>
         {isConnected ? (
           Hunter ? (
-            <div className="flex flex-col gap-10 between item-center h-fit">
-              <div className="flex flex-col items-start justify-start md:px-5">
-                <p className="mt-5 md:text-3xl mx-auto text-xl shrink-0 text-[#F04B08] text-center ">
-                  Welcome, Hunter!!!
-                </p>
-                <p className="mt-6 text-lg mx-auto max-w-[500px] text-white px-3 font-serif ">
+            <div className="flex flex-col flex-grow h-auto gap-10 between item-center">
+              <p className="mt-5 md:text-5xl font-bold mx-auto text-xl shrink-0 text-[#F04B08] text-center ">
+                Welcome, Hunter!!!
+              </p>
+              <div className="flex flex-col items-center justify-between gap-5 md:flex-row md:px-5">
+                <p className="mt-6 text-lg mx-auto text-center max-w-[500px] text-white px-3 font-serif ">
                   Are you ready to earn rewards and climb the ranks? By growing
                   your team and sharing your referral link, you can earn up to
                   15% of your team's KLB income across five levels. Don't miss
@@ -131,7 +131,7 @@ const ConnectWallet = () => {
                   mark in the Kimberlite ecosystem. Let's get started today!
                 </p>
 
-                <div className="flex flex-col items-center justify-center gap-3 m-5 mx-auto text-white ">
+                <div className="flex flex-col items-center justify-center gap-3 p-8 mx-auto text-white border-2 border-white rounded-md ring-gray-500 ring-2 bor ">
                   <p>KLB Balance: {Bonus} KLB</p>
 
                   <p>Direct Referrals : {Number(userData.directRefs)}</p>
@@ -139,7 +139,9 @@ const ConnectWallet = () => {
                 </div>
               </div>
               <div className="flex justify-center items-center flex-col gap-3 p-1 mx-auto text-white  w-[100%] ">
-                <p className="text-orange-400">Your Referral link : </p>
+                <p className="text-[#F04B08] font-serif text-2xl">
+                  Your Referral link :{" "}
+                </p>
                 <p className="p-4 mt-3 overflow-auto text-sm border rounded-2xl md:w-fit w-[90%] mb-2">
                   {`https://kimberlite.rocks/pre/${address}`}
                 </p>
@@ -208,16 +210,18 @@ const ConnectWallet = () => {
             </div>
           )
         ) : (
-          <div className="h-screen ">
-            <div className="flex justify-center items-center mt-[50px] flex-col gap-8">
+          <div className="h-screen min-h-screen font-bold ">
+            <div className="flex justify-center items-center mt-[50px] flex-col gap-10">
               {" "}
-              <p className=" text-2xl text-[#F04B08] md:text-5xl text-center">
-                Hello Gem Hunter You are at Kimberlite{" "}
+              <p className=" text-5xl text-[#F04B08] md:text-8xl text-center">
+                Hello Gem <br />
+                Hunter{" "}
               </p>{" "}
-              <p className=" text-2xl text-[#F04B08] md:text-5xl text-center">
-                You are at Kimberlite{" "}
+              <p className=" text-4xl text-[#F04B08] md:text-6xl text-center">
+                You are at <br />
+                Kimberlite{" "}
               </p>{" "}
-              <p className=" text-lg text-[#fff] md:text-3xl text-center">
+              <p className=" text-2xl max-w-3xl text-[#fff] md:text-3xl text-center md:max-w-[400px]">
                 Your Gateway to AI-Driven Multichain High Yield Aggregation{" "}
               </p>{" "}
             </div>

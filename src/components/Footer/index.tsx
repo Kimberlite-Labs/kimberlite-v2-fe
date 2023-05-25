@@ -8,10 +8,10 @@ const index = () => {
       </p>
       <p>Terms of Service</p>
       <div className="flex items-center gap-5 mt-5 text-2xl">
-        <BsMedium />
+        <BsDiscord className=" text-[#543fca]" />
         <BsTwitter className=" text-[#45c1e7]" />
         <BsGithub />
-        <BsDiscord className=" text-[#543fca]" />
+        <BsMedium />
       </div>
     </div>
   );
