@@ -9,7 +9,7 @@ const index = () => {
         </p>
         <p className="lg:text-5xl text-2xl font-bold  text-center  font-serif lg:max-w-[900px] mt-10 ">
           {" "}
-          Your Gateway to AI-Driven Multichain High Yield Aggregation
+          Your Gateway to Secure, AI-Driven Multichain Yield
         </p>
       </div>
     </div>

@@ -175,15 +175,15 @@ const ConnectWallet = () => {
                 Welcome, Hunter!!!
               </p>
               <div className="flex flex-col items-center justify-between gap-5 md:flex-row md:px-5">
-                <p className="mt-6 text-lg mx-auto text-center max-w-[500px] text-white px-3 font-serif ">
-                  Are you ready to earn rewards and climb the ranks?
+                <div className="mt-6 text-lg mx-auto text-center max-w-[500px] text-white px-3 font-serif ">
+                  <span className="text-2xl font-bold">Are you ready to earn rewards and climb the ranks?</span>
                   <br />
                   By growing your team and sharing your referral link, you can
                   earn up to 15% of your team's KLB income across five levels.
                   <br /> Don't miss out on this exciting opportunity to earn
                   rewards and make your mark in the Kimberlite ecosystem. Let's
                   get started today!
-                </p>
+                </div>
 
                 <div className="flex flex-col items-center justify-center gap-3 p-8 mx-auto text-white border-2 border-white rounded-md ring-gray-500 ring-2 bor ">
                   <p>KLB Balance: {Bonus} KLB</p>
