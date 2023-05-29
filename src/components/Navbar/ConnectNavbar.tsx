@@ -19,8 +19,16 @@ const Index = () => {
               <Link to="/">
                 <button className=" hover:text-gray-800">Home</button>
               </Link>
-              <button className=" hover:text-gray-800">Whitepaper</button>
-              <button className=" hover:text-gray-800">Explore Safe</button>
+              <a href="https://docs.kimberlite.rocks" target="_blank" rel="noopener noreferrer" className="mx-auto">
+              <button className="z-50 block px-3 py-2 text-base font-bold rounded-md hover:text-gray-800">
+                Whitepaper
+              </button>
+            </a>
+            <a href="https://safe.kimberlite.rocks" target="_blank" rel="noopener noreferrer" className="mx-auto">
+              <button className="z-50 block px-3 py-2 text-base font-bold rounded-md hover:text-gray-800">
+              Explore Safe
+              </button>
+            </a>
               <Link to="/pre">
                 <button className=" hover:text-gray-800">
                   Pre-registration
@@ -52,16 +60,22 @@ const Index = () => {
                 Home
               </button>
             </Link>
-            <Link to={""} className="mx-auto">
-              <button className="z-50 block px-3 py-2 text-base font-medium rounded-md hover:text-gray-800">
+            <a
+              href="https://docs.kimberlite.rocks"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mx-auto z-50"
+            >
+              <button className=" block px-3 py-2 text-base font-medium rounded-md hover:text-gray-800">
                 Whitepaper
               </button>
-            </Link>
-            <Link to={""} className="mx-auto">
+            </a>
+            <a   href="https://safe.kimberlite.rocks" target="_blank" rel="noopener noreferrer" className="mx-auto z-50">
+
               <button className="z-50 px-3 py-2 text-base font-medium rounded-md only:block hover:text-gray-800">
                 Explore Safe
               </button>
-            </Link>
+            </a>
             <Link to="/pre" className="z-50 mx-auto">
               <button className="block px-3 py-2 text-base font-medium rounded-md hover:text-gray-800">
                 Pre-registration
