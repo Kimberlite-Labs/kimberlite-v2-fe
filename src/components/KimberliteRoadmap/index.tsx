@@ -49,14 +49,14 @@ const index = () => {
                 key={team.id}
                 className="flex flex-wrap justify-center space-x-4"
               >
-                <div className="px-3 lg:px-1">
+                <div className="flex flex-col px-3 lg:px-1 item-center">
                   <p className="m-6 text-xl font-bold text-center text-white mb-21">
                     {team.dis}{" "}
                   </p>
                   <div
                     className={` ${
                       team.role ? "bg-[#02024D]" : "bg-[#F04B08]"
-                    } w-fit my-auto h-[30vh]  text-white rounded-b-md text-sm  text-center font-bold p-3 lg:text-xl`}
+                    } lg:w-[60%] w-fit item-center flex items-center h-[54vh] justify-center md:h-[fit] lg:h-[54vh] my-auto  text-white rounded-b-md text-sm  text-center font-bold p-3 lg:text-xl`}
                   >
                     <div className="">
                       <p className="flex items-center justify-center text-sm lg:text-lg ">
