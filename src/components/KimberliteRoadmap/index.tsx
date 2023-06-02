@@ -56,11 +56,11 @@ const index = () => {
                   <div
                     className={` ${
                       team.role ? "bg-[#02024D]" : "bg-[#F04B08]"
-                    } lg:w-[60%] w-fit item-center flex items-center h-[54vh] justify-center md:h-[fit] lg:h-[54vh] my-auto  text-white rounded-b-md text-sm  text-center font-bold p-3 lg:text-xl`}
+                    } lg:w-[80%] w-fit item-center rounded-xl flex items-center h-[54vh] justify-center md:h-[fit] lg:h-[54vh] my-auto  text-white rounded-b-md text-sm   font-bold p-3 lg:text-xl`}
                   >
                     <div className="">
-                      <p className="flex items-center justify-center text-sm lg:text-lg ">
-                        {team.role || team.role1}
+                      <p className="flex justify-start text-sm text lg:text-lg ">
+                      {team.role || team.role1}
                       </p>
 
                       {/* <p className="pt-2 text-lg ">{team.role}</p> */}

@@ -5,10 +5,10 @@ export const team = [
     dis: "Q4 2022",
     role: (
       <div>
-        Concept development and market research
+           <span className="text-3xl "> • </span> Concept development and market research
         <br />
-        Formation of core team and advisory board <br />
-        Initial prototype and proof of concept
+           <span className="text-3xl "> • </span> Formation of core team and advisory board <br />   <span className="text-3xl "> • </span> Initial prototype
+        and proof of concept
       </div>
     ),
   },
@@ -17,19 +17,18 @@ export const team = [
     dis: "Q1 2023",
     role1: (
       <div>
-        Discord Community
+           <span className="text-3xl "> • </span> Discord Community
         <br />
-        Gateway, Jewel List.
+           <span className="text-3xl "> • </span> Gateway, Jewel List.
         <br />
-        Smart contracts design
+           <span className="text-3xl "> • </span> Smart contracts design
         <br />
-        Kimberlite Safe dApp
+           <span className="text-3xl "> • </span> Kimberlite Safe dApp
         <br />
-        Smart contract testing
+           <span className="text-3xl "> • </span> Smart contract testing
         <br />
-        Quality Assurance
-        <br />
-        Audits
+           <span className="text-3xl "> • </span> Quality Assurance and Audits
+      
       </div>
     ),
   },
@@ -40,15 +39,15 @@ export const team = [
 
     role: (
       <div>
-        Development of AI-driven analytics and optimization algorithms
+           <span className="text-3xl "> • </span> <span className="ml-4 ">Development of AI-driven analytics and optimization algorithms</span>
         <br />
-        Integration with major blockchains and DeFi protocols
+           <span className="text-3xl "> • </span> Integration with major blockchains and DeFi protocols
         <br />
-        Jewel Pass Mint
+           <span className="text-3xl "> • </span>Jewel Pass Mint
         <br />
-        Security audits and smart contract development
-        <br />
-        Private alpha testing with Jewel Pass holdersSmart contract testing
+           <span className="text-3xl "> • </span> Security audits and smart contract development
+        <br />   <span className="text-3xl "> • </span> Private alpha testing with Jewel Pass holdersSmart contract
+        testing
       </div>
     ),
   },
@@ -58,16 +57,15 @@ export const team = [
 
     role1: (
       <div>
-        Initial launch of our Multichain AI-Based High Yield Aggregator
+           <span className="text-3xl "> • </span> Initial launch of our Multichain AI-Based High Yield Aggregator
         platform.
         <br />
-        Integration with at least 4 EVM's
+           <span className="text-3xl "> • </span> Integration with at least 4 EVM's
         <br />
-        Basic AI-driven yield optimization capabilities in place.
+           <span className="text-3xl "> • </span> Basic AI-driven yield optimization capabilities in place.
         <br />
-        Yield aggregation contracts deployed
-        <br />
-        Aggressive Marketing
+           <span className="text-3xl "> • </span>Yield aggregation contracts deployed
+        <br />   <span className="text-3xl "> • </span> Aggressive Marketing
       </div>
     ),
   },
@@ -78,15 +76,14 @@ export const team = [
 
     role: (
       <div>
-        Further refinements to our AI algorithms, improving the yield
+           <span className="text-3xl "> • </span>Further refinements to our AI algorithms, improving the yield
         optimization process.
         <br />
-        Expansion of our platform's integration to additional blockchain
+           <span className="text-3xl "> • </span> Expansion of our platform's integration to additional blockchain
         networks.
         <br />
-        Implementation of user feedback to enhance the user experience.
-        <br />
-        Marketing and partnership efforts to drive user adoption.
+           <span className="text-3xl "> • </span>Implementation of user feedback to enhance the user experience.
+        <br />   <span className="text-3xl "> • </span> Marketing and partnership efforts to drive user adoption.
       </div>
     ),
   },
@@ -97,15 +94,14 @@ export const team = [
 
     role1: (
       <div>
-        Integration of advanced machine learning models for more accurate and
+           <span className="text-3xl "> • </span>Integration of advanced machine learning models for more accurate and
         dynamic yield optimization.
         <br />
-        Introduction of a decentralized governance model, allowing Jewel Pass
+           <span className="text-3xl "> • </span> Introduction of a decentralized governance model, allowing Jewel Pass
         holders to participate in platform decision-making through our nft-based
         voting system.
-        <br />
-        Further investment in marketing and partnerships to increase brand
-        awareness and user adoption.
+        <br />   <span className="text-3xl "> • </span> Further investment in marketing and partnerships to increase
+        brand awareness and user adoption.
       </div>
     ),
   },
@@ -115,16 +111,15 @@ export const team = [
 
     role: (
       <div>
-        Continuous Improvement & Growth
+       <span className="text-3xl ">• </span>Continuous Improvement & Growth
         <br />
-        Ongoing enhancements to our AI algorithms, user experience, and platform
-        features to stay at the forefront of the DeFi landscape.
+           <span className="text-3xl "> • </span>Ongoing enhancements to our AI algorithms, user experience, and
+        platform features to stay at the forefront of the DeFi landscape.
         <br />
-        Exploration of emerging blockchain networks and technologies to ensure
+           <span className="text-3xl "> • </span> Exploration of emerging blockchain networks and technologies to ensure
         our platform remains competitive and innovative.
-        <br />
-        Long-term commitment to user-centric development, ensuring the platform
-        continues to meet the evolving needs of the DeFi community.
+        <br />   <span className="text-3xl "> • </span> Long-term commitment to user-centric development, ensuring the
+        platform continues to meet the evolving needs of the DeFi community.
       </div>
     ),
   },
